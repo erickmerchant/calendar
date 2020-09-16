@@ -1,0 +1,36 @@
+{
+  "name": "calendar",
+  "version": "1.0.0",
+  "private": true,
+  "keywords": [],
+  "license": "ISC",
+  "author": "Erick Merchant <erickmerchant@gmail.com>",
+  "type": "module",
+  "scripts": {
+    "build": "node ./cli.js build",
+    "start": "node ./cli.js start",
+    "lint": "eslint . --ignore-path .gitignore",
+    "test": "npm run lint"
+  },
+  "dependencies": {
+    "@erickmerchant/css": "^23.4.0",
+    "@erickmerchant/dev-cli": "^18.2.0",
+    "@erickmerchant/framework": "^39.3.1",
+    "execa": "^4.0.3"
+  },
+  "devDependencies": {
+    "@erickmerchant/eslint-config": "^1.1.2",
+    "@erickmerchant/prettier-config": "^1.2.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.9.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.1.2"
+  },
+  "engines": {
+    "node": ">=14.3"
+  },
+  "eslintConfig": {
+    "extends": "@erickmerchant/eslint-config"
+  },
+  "prettier": "@erickmerchant/prettier-config"
+}
