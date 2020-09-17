@@ -5,8 +5,8 @@ const [, year, month] = window.location.pathname.split('/')
 const now = new Date()
 
 const date = new Date(
-  year != null ? Number(year) : now.getFullYear(),
-  month != null ? Number(month) - 1 : now.getMonth()
+  year != null && year !== '' ? Number(year) : now.getFullYear(),
+  month != null && month !== '' ? Number(month) - 1 : now.getMonth()
 )
 
 export const defaultState = {
