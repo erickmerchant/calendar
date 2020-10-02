@@ -12,7 +12,7 @@ export const _start = `
   }
 `
 
-export const styles = {
+export const classes = {
   app: `
     display: grid;
     background-color: hsl(200, 0%, 90%);
