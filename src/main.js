@@ -16,7 +16,15 @@ export const defaultState = {
 export const createComponent = ({app, classes}) => {
   return (state) => html`
     <body class=${classes.app}>
-      <header class=${classes.top}>
+      <header
+        class=${classes.top}
+        style=${`--background-image: url("https://source.unsplash.com/1280x1280/?nature,${state.date.toLocaleDateString(
+          'en-US',
+          {
+            month: 'long'
+          }
+        )}")`}
+      >
         <h1 class=${classes.h1}>
           ${state.date.toLocaleDateString('en-US', {
             month: 'long',

@@ -15,30 +15,41 @@ export const _start = `
 export const classes = {
   app: `
     display: grid;
-    background-color: hsl(200, 0%, 90%);
+    background-color: hsl(0, 0%, 99%);
     color: hsl(200, 0%, 10%);
     font: 16px/1.5 system-ui;
     display: grid;
     grid-template-rows: 1fr 1fr;
     height: 100%;
     overflow: visible;
-    margin: 1em;
   `,
   top: `
     grid-row: 1;
+    min-height: 100vw;
+    background-image: var(--background-image);
+    background-size: cover;
+    font-size: 6vw;
+    padding: 1em;
+
+    @media (orientation: landscape) {
+      height: 100vh;
+    }
   `,
   bottom: `
     grid-row: 2;
+    font-size: 2vw;
   `,
   h1: `
     font-weight: bold;
-    font-size: 3em;
+    color: white;
+    text-shadow: 1px 1px 1px black;
   `,
   grid: `
     display: grid;
-    grid-template-columns: repeat(7, calc((100% - 3em) / 7));
+    grid-template-columns: repeat(7, calc((100vw - 3em) / 7));
     gap: 0.5em;
     padding-bottom: 1em;
+    padding: 1em;
   `,
   weekDay: `
     text-align: center;
@@ -51,11 +62,7 @@ export const classes = {
     grid-row: var(--y);
     border: 1px solid currentColor;
     background: white;
-    height: 0;
-    overflow: visible;
-    padding-top: 0.5em;
-    padding-right: 0.5em;
-    padding-left: 0.5em;
-    padding-bottom: 100%;
+    padding: 0.5em;
+    height: calc((100vw - 3em) / 7);
   `
 }
