@@ -41,8 +41,8 @@ export const classes = {
   `,
   h1: `
     font-weight: bold;
-    color: white;
-    text-shadow: 1px 1px 1px black;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
   `,
   grid: `
     display: grid;
@@ -61,7 +61,7 @@ export const classes = {
     grid-column: var(--x);
     grid-row: var(--y);
     border: 1px solid currentColor;
-    background: white;
+    background: #fff;
     padding: 0.5em;
     height: calc((100vw - 3em) / 7);
   `
