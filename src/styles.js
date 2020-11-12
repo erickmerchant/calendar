@@ -48,7 +48,6 @@ export const classes = {
     display: grid;
     grid-template-columns: repeat(7, calc((100% - 3em) / 7));
     gap: 0.5em;
-    padding-bottom: 1em;
     padding: 1em;
   `,
   weekDay: `
