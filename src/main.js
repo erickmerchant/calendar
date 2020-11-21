@@ -9,8 +9,10 @@ const date = new Date(
   month != null && month !== '' ? Number(month) - 1 : now.getMonth()
 )
 
-export const defaultState = {
-  date
+export const getDefaultState = () => {
+  return {
+    date
+  }
 }
 
 export const createComponent = ({app, classes}) => {
