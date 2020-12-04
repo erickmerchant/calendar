@@ -49,29 +49,23 @@ export const createComponent = ({app, classes}) => {
               const month = state.date.getMonth()
               const daysInTheMonth = new Date(year, month + 1, 0).getDate()
 
-              let dayOfWeek = new Date(year, month, 1).getDay()
-              let weekOfMonth = 0
-              let i = 1
+              yield html`
+                <div
+                  class=${classes.day}
+                  style=${`--x: ${new Date(year, month, 1).getDay() + 1}`}
+                >
+                  1
+                </div>
+              `
+
+              let i = 2
 
               do {
                 yield html`
-                  <div
-                    class=${classes.day}
-                    style=${`--x: ${dayOfWeek + 1}; --y: ${weekOfMonth + 2};`}
-                  >
-                    ${i}
-                  </div>
+                  <div class=${classes.day}>${i}</div>
                 `
 
                 i++
-
-                dayOfWeek++
-
-                if (dayOfWeek > 6) {
-                  weekOfMonth++
-
-                  dayOfWeek = 0
-                }
               } while (i <= daysInTheMonth)
             }
           }}

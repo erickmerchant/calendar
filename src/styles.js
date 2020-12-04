@@ -57,8 +57,8 @@ export const classes = {
     grid-row: 1;
   `,
   day: `
-    grid-column: var(--x);
-    grid-row: var(--y);
+    grid-column: var(--x, auto);
+    grid-row: auto;
     border: 1px solid currentColor;
     background: #fff;
     padding: 0.5em;
