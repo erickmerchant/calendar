@@ -19,12 +19,10 @@ export const classes = {
     color: hsl(200, 0%, 10%);
     font: 16px/1.5 system-ui;
     display: grid;
-    grid-template-rows: 1fr 1fr;
     height: 100%;
     overflow: visible;
   `,
   top: `
-    grid-row: 1;
     min-height: 100vw;
     background-image: var(--background-image);
     background-size: cover;
@@ -36,7 +34,6 @@ export const classes = {
     }
   `,
   bottom: `
-    grid-row: 2;
     font-size: 2vw;
   `,
   h1: `
@@ -54,11 +51,9 @@ export const classes = {
     text-align: center;
     padding: 1em;
     font-weight: bold;
-    grid-row: 1;
   `,
   day: `
     grid-column: var(--x, auto);
-    grid-row: auto;
     border: 1px solid currentColor;
     background: #fff;
     padding: 0.5em;
